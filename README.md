@@ -27,4 +27,7 @@ Data analysis project to understand the factors that influence the number of tot
 
 **FinalProjectVisualizations.R:**<p>Creates the visualization for an overview of dock availability based on area</p>
 
+#### Poster
+
+**Cianna - Capstone Poster:**<p>My Poster file
 
