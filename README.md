@@ -9,14 +9,15 @@ Data analysis project to understand the factors that influence the number of tot
 
 
 ### Files
+
 #### Datasets
-<par>**Cleaned_Bluebikes_Stations.csv:** Cleaned dataset only containing bluebike station data (produced by FinalProjectCleaningDataset.R & reads into FinalProjectDataAdjustments.R)<par/>
-<par>**full_bike_data.csv:** Merged dataset with all the info (produced by FinalProjectDataAdjustments.R & reads into FinalProjectModeling.R and FinalProjectVisualizations.R)<par/>
+**Cleaned_Bluebikes_Stations.csv:**<p>Cleaned dataset only containing bluebike station data (produced by FinalProjectCleaningDataset.R & reads into FinalProjectDataAdjustments.R)</p>
+**full_bike_data.csv:**<p>Merged dataset with all the info (produced by FinalProjectDataAdjustments.R & reads into FinalProjectModeling.R and FinalProjectVisualizations.R)</p>
 
 #### R scripts
-<par>**FinalProjectCleaningDataset.R:** Cleans the initial datset downloaded from the bluebike website, and produces Cleaned_Bluebikes_Stations.csv<par/>
-<par>**FinalProjectDataAdjustments.R:** Merges all the info from the datasets, and produces full_bike_data.csv<par/>
-<par>**FinalProjectModeling.R:** Contains code for all the modeling and data analysis, as well as the visualizations for validity checks and plots that demonstrate models<par/>
-<par>**FinalProjectVisualizations.R:** Creates the visualization for an overview of dock availability based on area<par/>
+**FinalProjectCleaningDataset.R:**<p>Cleans the initial datset downloaded from the bluebike website, and produces Cleaned_Bluebikes_Stations.csv</p>
+**FinalProjectDataAdjustments.R:**<p>Merges all the info from the datasets, and produces full_bike_data.csv</p>
+**FinalProjectModeling.R:**<p>Contains code for all the modeling and data analysis, as well as the visualizations for validity checks and plots that demonstrate models</p>
+**FinalProjectVisualizations.R:**<p>Creates the visualization for an overview of dock availability based on area</p>
 
 
