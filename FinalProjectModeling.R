@@ -66,7 +66,7 @@ boxCox(bestModel)
 
 
 lambda1 <- -1
-# Create a transformed response variable:
+# Create a transformed response variable:   (Model used in poster)
 bikedata$Transformed_Docks1 <- (bikedata$Total_Docks^lambda1 - 1) / lambda1
 
 # Fit the model again using the transformed response
@@ -111,19 +111,12 @@ interactionModel <- lm(Transformed_Docks1 ~ `Largest Age Group` * Distance_to_Ne
                        data = bikedata)
 summary(interactionModel)
 
-#wanted to investigate age group and distance to nearest College interaction
-interactionModel2 <- lm(Transformed_Docks1 ~ `Largest Age Group` * Distance_to_Nearest_College_km, data = bikedata)
-summary(interactionModel2)
+#run partial F-test to check whether the interaction term significantly improves model fit over the simpler first order model
+anova(transModel1, interactionModel)
 
 
-#doing a stepwise interaction with the OG full model
-fullInteraction <- lm(Transformed_Docks1 ~ (`2023POP` +`Largest Age Group` + Distance_to_Nearest_MBTA_km + Distance_to_Nearest_College_km)^2, 
-                       data = bikedata)
-stepwiseInteractionModel <- stepAIC(fullInteraction, direction = "both")
-summary(stepwiseInteractionModel)
 
-
-#plots for stepwise "significant" interactions
+#plot for  "significant" interactions
 #Age Group and distance to nearest MBTA
 ggplot(bikedata, aes(x = Distance_to_Nearest_MBTA_km,
                      y = Transformed_Docks1,
@@ -135,17 +128,7 @@ ggplot(bikedata, aes(x = Distance_to_Nearest_MBTA_km,
        y = "Transformed Docks") +
   theme_minimal()
 
-#distance MBTA and distance college
-ggplot(bikedata, aes(x = Distance_to_Nearest_MBTA_km,
-                     y = Transformed_Docks1,
-                     color = Distance_to_Nearest_College_km)) +
-  geom_point(alpha = 0.6) +
-  scale_color_viridis_c() +
-  labs(title = "Interaction: MBTA × College Distance",
-       x = "Distance to MBTA (km)",
-       y = "Transformed Docks",
-       color = "College Distance (km)") +
-  theme_minimal()
+
 
 
 
